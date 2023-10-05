@@ -88,7 +88,7 @@ namespace AliyunDDns
         {
             Console.WriteLine($"{DateTime.Now}: Begin Set DDns");
             var ip = GetIP();
-            Console.WriteLine($"Current ip is : {ip}");
+            Console.WriteLine($"{DateTime.Now}: Current ip is : {ip}");
             var subDomainResult = DescribeSubDomainRecords();
             if (subDomainResult.TryGetValue("statusCode", out object statusCode)
                 && statusCode is int status && status == 200)
